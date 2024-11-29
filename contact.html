@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Zoo Arcadia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="contact.css"> <!-- Mêmes styles que la page d'accueil -->
+</head>
+<body>
+    <header class="bg-success text-white text-center py-3">
+        <a href="index.html">
+            <img src="pictures/logo.png" alt="logo-Zoo-Arcadia" class="logo">
+        </a>
+        <h1>Contactez-nous</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="habitats.html">Habitats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Connexion</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <h2 class="text-center mb-4">Formulaire de Contact</h2>
+        <form id="contactForm" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" required>
+                <div class="invalid-feedback">Veuillez entrer votre nom.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
+                <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
+            </div>
+            <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input type="text" class="form-control" id="subject" placeholder="Sujet de votre message" required>
+                <div class="invalid-feedback">Veuillez entrer un sujet.</div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Entrez votre message" required></textarea>
+                <div class="invalid-feedback">Veuillez entrer un message.</div>
+            </div>
+            <div class="back-to-home">
+                <button type="submit" class="btn btn-success">Envoyer</button>
+            </div>
+        </form>
+        
+        <section class="contact-info bg-light text-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-3">
+                        <h5>Adresse</h5>
+                        <p>123 Rue de la Faune, 75000 Paris, France</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-3">
+                        <h5>Téléphone</h5>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-3">
+                        <h5>Horaires</h5>
+                        <p>Lundi - Vendredi : 9h - 18h<br>Samedi - Dimanche : 10h - 17h</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="back-to-home mt-4">
+        <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
+    </div> 
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Zoo Arcadia. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

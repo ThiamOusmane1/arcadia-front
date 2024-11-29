@@ -1,0 +1,493 @@
+/* Body - Adaptation pour mobiles */
+body {
+    background: url('pictures/Jungle.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #289321;
+    overflow-x: hidden; /* Empêcher le défilement horizontal */
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, rgba(85, 107, 47, 0.3), rgba(143, 188, 143, 0.3));
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 4px solid #3b5323;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .logo {
+    max-width: 100px; /* Réduire la taille du logo pour les petits écrans */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #fff;
+}
+
+/* Main container */
+main {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box; /* Assurer une largeur toujours égale à celle de la fenêtre */
+}
+
+.section-presentation p {
+    color: #393737;
+    font-weight: bold;
+}
+
+/* Styles pour les images du carrousel de présentation */
+#presentationCarousel .carousel-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-caption {
+    background-color: rgba(34, 139, 34, 0.4);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #556b2f;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-footer {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* Styles pour la galerie du zoo */
+.zoo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.zoo-gallery .gallery-card {
+    flex: 1 1 calc(33.333% - 10px);
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.zoo-gallery .gallery-card img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #ddd;
+}
+
+.zoo-gallery .gallery-card h5 {
+    color: #069d01;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.zoo-gallery .gallery-card p {
+    color: #444;
+
+
+}
+
+.zoo-gallery .gallery-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5); /* Fond blanc avec transparence */
+}
+
+/* Styles pour les cartes de services */
+.zoo-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.zoo-services .service-card {
+    flex: 1 1 calc(33.333% - 10px);
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.zoo-services .service-card img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #ddd;
+    cursor: pointer; 
+}
+
+.zoo-services .service-card .card-body {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.zoo-services .service-card .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #069d01;
+}
+
+.zoo-services .service-card .card-text {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Effet de survol pour les cartes de services */
+.zoo-services .service-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5); /* augmentation de l'opacité au survol */
+}
+
+/* Stylisation du carrousel d'avis */
+#reviewCarousel {
+    width: 100%; 
+    margin-top: 20px; 
+}
+
+#reviewCarousel .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#reviewCarousel .carousel-item {
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+}
+
+#reviewCarousel .carousel-item.active {
+    display: flex; 
+}
+
+#reviewCarousel .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Styles pour les cartes d'habitats */
+.ha-card {
+    flex: 1 1 calc(33.333% - 10px);
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3); /* Fond blanc avec transparence */
+}
+
+.ha-card img {
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour les images */
+    object-fit: cover; /* Couvre la zone sans déformer l'image */
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.ha-card h5 {
+    color: #069d01;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.ha-card p {
+    text-align: center;
+    color: #444;
+}
+
+.ha-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, rgba(59, 83, 35, 0.8), rgba(85, 107, 47, 0.8));
+    color: blanchedalmond;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 4px solid #556b2f;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Button */
+.back-to-home {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-to-home a.btn-primary {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-home a.btn-primary:hover {
+    background-color: #388e3c;
+    border-color: #388e3c;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: white;
+}
+
+/* Formulaire */
+form {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px); /* Effet de flou derrière */
+}
+
+/* Titre du formulaire */
+h2 {
+    color: #006400;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Labels du formulaire */
+form label {
+    font-size: 1rem;
+    color: #3b5323;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Champs de saisie */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #3b5323;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #006400;
+    box-shadow: 0 0 8px rgba(0, 100, 0, 0.4);
+}
+
+/* Boutons */
+form button[type="submit"] {
+    background-color: #006400;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #289321;
+}
+
+form .btn-secondary {
+    background-color: #555;
+    border: none;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form .btn-secondary:hover {
+    background-color: #333;
+}
+
+/* Message d'erreur */
+form .invalid-feedback {
+    color: #d9534f;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 20px;
+    }
+
+    header .logo {
+        max-width: 150px; /* Augmente la taille du logo pour les écrans plus grands */
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Agrandissement du titre sur les tablettes */
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 40px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .zoo-gallery, .zoo-services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .zoo-gallery .gallery-card, .zoo-services .service-card .ha-card {
+        flex: 1 1 calc(33.333% - 10px); /* Affiche les éléments en grille */
+        margin-bottom: 20px;
+    }
+
+    #presentationCarousel .carousel-item img {
+        height: 500px;
+    }
+
+    form {
+        padding: 30px;
+    }
+
+    h2 {
+        
+       font-size: 1.75rem;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 0.9rem;
+    }
+
+    form button[type="submit"],
+    form .btn-secondary {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 3rem; /* Agrandissement du titre pour les grands écrans */
+    }
+
+    main {
+        padding: 50px;
+        max-width: 1400px;
+    }
+
+    footer {
+        padding: 30px;
+    }
+
+    .zoo-gallery .gallery-card, .zoo-services .service-card .ha-card {
+        flex: 1 1 calc(25% - 15px); /* Plus de cartes sur les grands écrans */
+    }
+}
+
+
